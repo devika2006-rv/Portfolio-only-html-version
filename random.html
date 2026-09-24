@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Devika Ratheesh | Cinematic Portfolio</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #11100f;
+    color: #f4eee5;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+section {
+    min-height: 100vh;
+    position: relative;
+    padding: 100px 8%;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.gold {
+    color: #d6b889;
+}
+
+
+/* =========================
+   CINEMATIC INTRO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 70% 40%, #443b32 0%, transparent 28%),
+        linear-gradient(120deg, #11100f, #191613, #0d0c0b);
+}
+
+
+/* giant background text */
+
+.hero::before {
+    content: "DEVIKA";
+    position: absolute;
+
+    font-family: Arial, sans-serif;
+    font-size: 20vw;
+    font-weight: 900;
+
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.07);
+
+    white-space: nowrap;
+
+    animation: slowMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes slowMove {
+
+    from {
+        transform: translateX(-4%);
+    }
+
+    to {
+        transform: translateX(4%);
+    }
+}
+
+
+/* film grain */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+
+    background-size: 4px 4px;
+
+    opacity: .08;
+
+    pointer-events: none;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1100px, 100%);
+}
+
+
+/* top cinematic line */
+
+.intro-line {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #aaa39a;
+
+    margin-bottom: 80px;
+}
+
+
+.hero h1 {
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(70px, 14vw, 190px);
+
+    line-height: .8;
+
+    letter-spacing: -8px;
+
+    text-transform: uppercase;
+
+    animation: titleIn 1.5s ease forwards;
+}
+
+@keyframes titleIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero-subtitle {
+
+    margin-top: 45px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-family: Arial, sans-serif;
+
+    color: #c7c0b6;
+}
+
+.line {
+    width: 80px;
+    height: 1px;
+    background: #c7a875;
+}
+
+
+.scroll {
+    position: absolute;
+
+    bottom: 35px;
+    left: 8%;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #8f8981;
+
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: .3;
+    }
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #e9e0d3;
+    color: #171513;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.about-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 10%;
+
+    align-items: center;
+}
+
+
+.about-image {
+
+    position: relative;
+
+    height: 600px;
+}
+
+
+.about-image img {
+
+    width: 75%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(30%);
+
+    box-shadow: 25px 25px 0 #c8b9a5;
+
+    transition: .6s;
+}
+
+
+.about-image:hover img {
+    transform: translate(15px, -15px);
+}
+
+
+.about-text h2 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(50px, 7vw, 100px);
+
+    line-height: .85;
+
+    text-transform: uppercase;
+
+    margin: 25px 0;
+}
+
+
+.about-text p {
+
+    max-width: 600px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #514a43;
+}
+
+
+.signature {
+
+    margin-top: 50px;
+
+    font-family: cursive;
+
+    font-size: 30px;
+
+    color: #8d7050;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey {
+
+    background:
+        linear-gradient(
+            rgba(20,18,16,.92),
+            rgba(20,18,16,.96)
+        );
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 100px;
+}
+
+
+.section-heading h2 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: .8;
+
+    text-transform: uppercase;
+
+    letter-spacing: -5px;
+}
+
+
+.timeline {
+
+    border-left: 1px solid #61574c;
+
+    margin-left: 20px;
+}
+
+
+.timeline-item {
+
+    padding: 0 0 90px 60px;
+
+    position: relative;
+}
+
+
+.timeline-item::before {
+
+    content: "";
+
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid #d2ae78;
+
+    background: #11100f;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: -7px;
+    top: 5px;
+}
+
+
+.year {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #d2ae78;
+
+    margin-bottom: 15px;
+}
+
+
+.timeline-item h3 {
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+
+.timeline-item p {
+
+    max-width: 650px;
+
+    color: #aaa39a;
+
+    line-height: 1.7;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+
+    background: #dcd1c1;
+
+    color: #181512;
+}
+
+
+.project-intro {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    margin-bottom: 100px;
+}
+
+
+.project-intro h2 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: .8;
+
+    text-transform: uppercase;
+
+    letter-spacing: -6px;
+}
+
+
+.project-intro p {
+
+    align-self: end;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #62594f;
+}
+
+
+/* project cards */
+
+.project {
+
+    min-height: 500px;
+
+    margin-bottom: 80px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: end;
+
+    padding: 50px;
+
+    overflow: hidden;
+
+    background: #302a25;
+
+    color: white;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,.2);
+
+    transition: transform .6s;
+}
+
+
+.project:hover {
+
+    transform: scale(.98);
+}
+
+
+.project-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: .45;
+
+    transition: transform 1s, opacity 1s;
+
+    filter: grayscale(30%);
+}
+
+
+.project:hover .project-bg {
+
+    transform: scale(1.08);
+
+    opacity: .6;
+}
+
+
+.project-info {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+
+.project-number {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #d9bd91;
+
+}
+
+
+.project h3 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(45px, 7vw, 100px);
+
+    line-height: .9;
+
+    text-transform: uppercase;
+
+    margin: 20px 0;
+}
+
+
+.project p {
+
+    max-width: 550px;
+
+    line-height: 1.6;
+
+    color: #ddd4ca;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+
+    background: #171513;
+}
+
+
+.skills-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+.skill-title {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: .8;
+
+    text-transform: uppercase;
+}
+
+
+.skills-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.skill {
+
+    border-bottom: 1px solid #403b36;
+
+    padding-bottom: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.skill span:first-child {
+
+    font-size: 25px;
+}
+
+
+.skill span:last-child {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #c7a875;
+}
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.achievements {
+
+    background: #eee7dd;
+
+    color: #171513;
+}
+
+
+.achievement-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2px;
+
+    background: #171513;
+
+    margin-top: 80px;
+}
+
+
+.achievement {
+
+    background: #eee7dd;
+
+    min-height: 280px;
+
+    padding: 45px;
+
+    transition: .5s;
+}
+
+
+.achievement:hover {
+
+    background: #d7c7b3;
+
+    transform: translateY(-8px);
+}
+
+
+.achievement-number {
+
+    font-family: Arial, sans-serif;
+
+    color: #8c7254;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+}
+
+
+.achievement h3 {
+
+    font-size: 35px;
+
+    margin: 35px 0 15px;
+}
+
+
+.achievement p {
+
+    font-family: Arial, sans-serif;
+
+    color: #686057;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    min-height: 90vh;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #42372d,
+            #11100f 65%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.contact-content {
+
+    max-width: 1000px;
+}
+
+
+.contact h2 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(70px, 13vw, 180px);
+
+    line-height: .8;
+
+    letter-spacing: -8px;
+
+    text-transform: uppercase;
+}
+
+
+.contact p {
+
+    margin: 50px auto;
+
+    max-width: 500px;
+
+    color: #bdb5aa;
+
+    line-height: 1.7;
+}
+
+
+.contact-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.contact-links a {
+
+    border: 1px solid #766957;
+
+    padding: 18px 30px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: .4s;
+}
+
+
+.contact-links a:hover {
+
+    background: #e0c49a;
+
+    color: #171513;
+
+    border-color: #e0c49a;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 30px 8%;
+
+    background: #090908;
+
+    color: #777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 800px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .about-grid,
+    .skills-layout,
+    .project-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-image img {
+        width: 85%;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        min-height: 450px;
+        padding: 30px;
+    }
+
+    .section-heading {
+        margin-bottom: 60px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SCENE 01
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="intro-line">
+
+            <span>Portfolio / 2026</span>
+
+            <span>Thrissur, Kerala</span>
+
+        </div>
+
+
+        <h1>Devika</h1>
+
+
+        <div class="hero-subtitle">
+
+            <div class="line"></div>
+
+            <span>
+                Computer Science Student · Builder · Explorer
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll">
+        ↓ SCROLL TO ENTER
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 02
+========================================================= -->
+
+<section class="about">
+
+    <div class="about-grid">
+
+
+        <div class="about-image">
+
+            <!-- CHANGE THIS IMAGE -->
+            <img src="WhatsApp Image 2026-09-23 at 3.21.57 PM.jpeg"
+                 alt="Devika R">
+
+        </div>
+
+
+        <div class="about-text">
+
+            <div class="small">
+                Scene 02 / The person
+            </div>
+
+            <h2>
+                Not just<br>
+                another<br>
+                developer.
+            </h2>
+
+            <p>
+                I'm Devika R, a Computer Science student
+                at Vidya Academy of Science and Technology.
+                I like turning ideas into things people can
+                actually see, use and interact with.
+            </p>
+
+            <p>
+                My current playground is somewhere between
+                web development, data visualization,
+                creative technology and endless curiosity.
+            </p>
+
+            <div class="signature">
+                Devika R.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 03
+========================================================= -->
+
+<section class="journey">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="small gold">
+                Scene 03 / Timeline
+            </div>
+
+            <h2>
+                The<br>
+                Journey
+            </h2>
+
+        </div>
+
+        <span class="small">
+            2024 — 2028
+        </span>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="year">
+                2024
+            </div>
+
+            <h3>
+                The beginning.
+            </h3>
+
+            <p>
+                Started my B.Tech journey in Computer Science
+                and Engineering at Vidya Academy of Science
+                and Technology.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="year">
+                2025
+            </div>
+
+            <h3>
+                Start building.
+            </h3>
+
+            <p>
+                Began exploring development, data visualization,
+                programming projects and technical events.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="year">
+                2026
+            </div>
+
+            <h3>
+                Ideas became projects.
+            </h3>
+
+            <p>
+                Participated in hackathons, project exhibitions
+                and the Infosys Springboard Virtual Internship
+                in Data Visualization.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="year">
+                2028
+            </div>
+
+            <h3>
+                Next chapter.
+            </h3>
+
+            <p>
+                Graduation, placements and whatever comes
+                after the credits roll.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 04
+========================================================= -->
+
+<section class="projects">
+
+
+    <div class="project-intro">
+
+        <h2>
+            Selected<br>
+            Work
+        </h2>
+
+        <p>
+            A few things I've built, explored and experimented
+            with along the way.
+        </p>
+
+    </div>
+
+
+
+    <!-- PROJECT 01 -->
+
+    <article class="project">
+
+        <!-- CHANGE IMAGE -->
+       
+
+        <div class="project-info">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                DeBuddy
+            </h3>
+
+            <p>
+                A beginner-friendly debugging platform designed
+                to help freshers understand debugging techniques
+                across programming languages.
+            </p>
+
+            <br>
+
+            <span class="small">
+                VTHINC · 2nd Prize
+            </span>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- PROJECT 02 -->
+
+    <article class="project">
+
+        <!-- CHANGE IMAGE -->
+        
+
+        <div class="project-info">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Global<br>
+                Tourism
+            </h3>
+
+            <p>
+                A Power BI data visualization project created
+                during Infosys Springboard Virtual Internship 6.0.
+            </p>
+
+            <br>
+
+            <span class="small">
+                DATA VISUALIZATION · POWER BI
+            </span>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- PROJECT 03 -->
+
+    <article class="project">
+
+        <!-- CHANGE IMAGE -->
+       
+
+        <div class="project-info">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Student<br>
+                ERP
+            </h3>
+
+            <p>
+                A desktop student management system built with
+                Java, JDBC and MySQL, featuring profile management,
+                CRUD operations and role-based access.
+            </p>
+
+            <br>
+
+            <span class="small">
+                JAVA · JDBC · MYSQL
+            </span>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 05
+========================================================= -->
+
+<section class="skills">
+
+    <div class="skills-layout">
+
+
+        <div>
+
+            <div class="small gold">
+                Scene 05 / Toolkit
+            </div>
+
+            <h2 class="skill-title">
+                Things<br>
+                I Use.
+            </h2>
+
+        </div>
+
+
+        <div class="skills-list">
+
+
+            <div class="skill">
+
+                <span>HTML</span>
+
+                <span>BUILDING</span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span>Java</span>
+
+                <span>PROGRAMMING</span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span>MySQL</span>
+
+                <span>DATABASE</span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span>Power BI</span>
+
+                <span>ANALYTICS</span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span>Data Visualization</span>
+
+                <span>INSIGHTS</span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span>Problem Solving</span>
+
+                <span>ALWAYS LEARNING</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 06
+========================================================= -->
+
+<section class="achievements">
+
+    <div class="small">
+        Scene 06 / Highlights
+    </div>
+
+    <div class="section-heading">
+
+        <h2>
+            Along<br>
+            The Way
+        </h2>
+
+    </div>
+
+
+    <div class="achievement-grid">
+
+
+        <div class="achievement">
+
+            <div class="achievement-number">
+                01
+            </div>
+
+            <h3>
+                2nd Prize
+            </h3>
+
+            <p>
+                VTHINC Project Exhibition for DeBuddy.
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <div class="achievement-number">
+                02
+            </div>
+
+            <h3>
+                1st Prize
+            </h3>
+
+            <p>
+                IEDC IDEATHON.
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <div class="achievement-number">
+                03
+            </div>
+
+            <h3>
+                Infosys
+            </h3>
+
+            <p>
+                Completed Infosys Springboard Virtual Internship
+                6.0 in Data Visualization.
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <div class="achievement-number">
+                04
+            </div>
+
+            <h3>
+                IEDC
+            </h3>
+
+            <p>
+                Woman Innovation Lead at Vidya Academy of
+                Science and Technology.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL SCENE
+========================================================= -->
+
+<section class="contact">
+
+    <div class="contact-content">
+
+
+        <div class="small gold">
+            Final Scene
+        </div>
+
+
+        <h2>
+            Let's<br>
+            Connect.
+        </h2>
+
+
+        <p>
+            Every project starts with an idea.
+            Maybe the next one starts with a conversation.
+        </p>
+
+
+        <div class="contact-links">
+
+            <a href="mailto:devikaratheesh6914@gmail.com">
+                Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/devika-r-976615337?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/devika2006-rv"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a href="Devika_R_Resume_ATS.docx.pdf"
+               target="_blank">
+                Resume
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CREDITS
+========================================================= -->
+
+<footer>
+
+    <span>
+        DEVIKA R
+    </span>
+
+    <span>
+        A PORTFOLIO, NOT A TEMPLATE.
+    </span>
+
+</footer>
+
+
+</body>
+</html>
